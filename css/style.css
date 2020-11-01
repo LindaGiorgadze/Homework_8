@@ -19,7 +19,7 @@
 	height: 286px;
 	padding-top: 50px;
 	position: absolute;
-    right: 35%;
+    	right: 35%;
 	bottom: 50%;
 	/*transform: translate(50%,50%);*/
 	animation-name:box;
@@ -59,7 +59,7 @@
 }
 
 @keyframes box {
-	from: {
+	from {
 		top: 500px;
 	}
 	to{
