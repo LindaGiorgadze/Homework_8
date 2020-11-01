@@ -59,7 +59,7 @@
 }
 
 @keyframes box {
-	from: {
+	from {
 		top: 500px;
 	}
 	to{
