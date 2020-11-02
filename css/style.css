@@ -14,55 +14,76 @@
 	bottom: 23%;
 	transform: translate(40%,40%);
 }
+.box-content {
+	position: absolute;
+	left: 50%;
+	top: 20%;
+	transform: translate(-28%, -50%);
+	width: 400px;
+	animation-name: box;
+	animation-duration: 4s;
+	animation-delay: 2s;
+	animation-iteration-count: infinite;
+	animation-fill-mode: backwards;
+	animation-timing-function: ease;
+}
 .computer{
-	width: 341px;
-	height: 286px;
-	/*padding-top: 50px;*/
-	position: absolute;
-    right: 35%;
-	bottom: 25%;
-	/*transform: translate(50%,50%);*/
-	animation-name:box;
-	animation-duration: 5s;
-	animation-delay: 2s;
-	animation-iteration-count: infinite;
-	animation-fill-mode: backwards;
-	animation-timing-function: ease;
+	width: 100%;
 }
-.keyboard{
-	position: absolute;
-	padding: 20px;
-	right: 35%;
-	bottom: 22%;
-	/*transform: translate(50%,50%);*/
-	z-index: 1;
-	animation-name:box;
-	animation-duration: 5s;
-	animation-delay: 2s;
-	animation-iteration-count: infinite;
-	animation-fill-mode: backwards;
-	animation-timing-function: ease;
+.mouse {
+	padding-left: 30px;
 }
-.mouse{
-	position: absolute;
-	padding: 20px;
-	left: 65%;
-	bottom: 22%;
-	z-index: 1;
-	/*transform: translate(50%,50%);*/
-	animation-name:box;
-	animation-duration: 5s;
-	animation-delay: 2s;
-	animation-iteration-count: infinite;
-	animation-fill-mode: backwards;
-	animation-timing-function: ease;
-}
-
 @keyframes box {
 	from {
-		top: 100px;
+		left: 50%;
+		top: 20%;
+		transform: translate(-28%, -50%);
 	}
 	to{
-		top: 410px;
+		left: 50%;
+		top: 46%;
+		transform: translate(-28%, -50%);
+	}
+}
+.coffee {
+	width: 185px;
+	position: absolute;
+	right: 100px;
+	bottom: 22%;
+}
+.mist {
+	width: 96px;
+	height: 100px;
+	position: absolute;
+	right: 140px;
+	bottom: 44%;
+	background-image: url(../images/mist1.png);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	animation-name: mists;
+	animation-delay: 2s;
+	animation-duration: 5s;
+	animation-fill-mode: forwards;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+@keyframes mists {
+	0% {
+		background-image: url(../images/mist1.png);
+		bottom: 44%;
+	}
+	33% {
+		background-image: url(../images/mist2.png);
+		bottom: 50%;
+	}
+	66% {
+		background-image: url(../images/mist3.png);
+		bottom: 44%;
+	}
+	100% {
+		background-image: url(../images/mist4.png);
+		bottom: 50%;
 	}
 }
