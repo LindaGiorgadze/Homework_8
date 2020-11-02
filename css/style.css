@@ -1,8 +1,17 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 .box{
 	width: 1100px;
 	height: 600px;
 	background-color: rgb(21, 30, 28);
 	position: relative;
+	-webkit-transition: all 0.3s ease 0.3s;
+	-o-transition: all 0.3s ease 0.3s;
 	transition: all 0.3s ease 0.3s;
 }
 .box:hover {
@@ -12,20 +21,30 @@
 	position: absolute;
 	right: 40%;
 	bottom: 23%;
-	transform: translate(40%,40%);
+	-webkit-transform: translate(40%,40%);
+	    -ms-transform: translate(40%,40%);
+	        transform: translate(40%,40%);
 }
 .box-content {
 	position: absolute;
 	left: 50%;
 	top: 20%;
-	transform: translate(-28%, -50%);
+	-webkit-transform: translate(-28%, -50%);
+	    -ms-transform: translate(-28%, -50%);
+	        transform: translate(-28%, -50%);
 	width: 400px;
-	animation-name: box;
-	animation-duration: 4s;
-	animation-delay: 2s;
-	animation-iteration-count: infinite;
-	animation-fill-mode: backwards;
-	animation-timing-function: ease;
+	-webkit-animation-name: box;
+	        animation-name: box;
+	-webkit-animation-duration: 4s;
+	        animation-duration: 4s;
+	-webkit-animation-delay: 2s;
+	        animation-delay: 2s;
+	-webkit-animation-iteration-count: infinite;
+	        animation-iteration-count: infinite;
+	-webkit-animation-fill-mode: backwards;
+	        animation-fill-mode: backwards;
+	-webkit-animation-timing-function: ease;
+	        animation-timing-function: ease;
 }
 .computer{
 	width: 100%;
@@ -33,16 +52,32 @@
 .mouse {
 	padding-left: 30px;
 }
-@keyframes box {
+@-webkit-keyframes box {
 	from {
 		left: 50%;
 		top: 20%;
-		transform: translate(-28%, -50%);
+		-webkit-transform: translate(-28%, -50%);
+		        transform: translate(-28%, -50%);
 	}
 	to{
 		left: 50%;
 		top: 46%;
-		transform: translate(-28%, -50%);
+		-webkit-transform: translate(-28%, -50%);
+		        transform: translate(-28%, -50%);
+	}
+}
+@keyframes box {
+	from {
+		left: 50%;
+		top: 20%;
+		-webkit-transform: translate(-28%, -50%);
+		        transform: translate(-28%, -50%);
+	}
+	to{
+		left: 50%;
+		top: 46%;
+		-webkit-transform: translate(-28%, -50%);
+		        transform: translate(-28%, -50%);
 	}
 }
 .coffee {
@@ -61,13 +96,38 @@
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
-	animation-name: mists;
-	animation-delay: 2s;
-	animation-duration: 5s;
-	animation-fill-mode: forwards;
-	animation-direction: alternate;
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
+	-webkit-animation-name: mists;
+	        animation-name: mists;
+	-webkit-animation-delay: 2s;
+	        animation-delay: 2s;
+	-webkit-animation-duration: 5s;
+	        animation-duration: 5s;
+	-webkit-animation-fill-mode: forwards;
+	        animation-fill-mode: forwards;
+	-webkit-animation-direction: alternate;
+	        animation-direction: alternate;
+	-webkit-animation-iteration-count: infinite;
+	        animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	        animation-timing-function: linear;
+}
+@-webkit-keyframes mists {
+	0% {
+		background-image: url(../images/mist1.png);
+		bottom: 44%;
+	}
+	33% {
+		background-image: url(../images/mist2.png);
+		bottom: 50%;
+	}
+	66% {
+		background-image: url(../images/mist3.png);
+		bottom: 44%;
+	}
+	100% {
+		background-image: url(../images/mist4.png);
+		bottom: 50%;
+	}
 }
 @keyframes mists {
 	0% {
